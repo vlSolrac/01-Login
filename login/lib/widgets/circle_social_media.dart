@@ -5,11 +5,16 @@ class CircleSocialMedia extends StatelessWidget {
   final String assetImage;
   final Color colorCircle;
   final Function()? onTap;
+  final double padding;
+  final double borderWidth;
+
   const CircleSocialMedia({
     Key? key,
     required this.assetImage,
-    required this.colorCircle,
+    this.colorCircle = Colors.black,
     this.onTap,
+    this.padding = 20,
+    this.borderWidth = 2,
   }) : super(key: key);
 
   @override
@@ -17,19 +22,19 @@ class CircleSocialMedia extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(padding),
         decoration: BoxDecoration(
           border: Border.all(
-            width: 2,
+            width: borderWidth,
             color: colorCircle,
           ),
-          // borderRadius: BorderRadius.circular(20),
           shape: BoxShape.circle,
         ),
         child: SvgPicture.asset(
           assetImage,
           width: 20,
           height: 20,
+          color: null,
         ),
       ),
     );
