@@ -21,7 +21,10 @@ class _ImageAnimationState extends State<ImageAnimation>
   late final Animation<Offset> _animation = Tween(
     begin: Offset.zero,
     end: const Offset(0, 0.08),
-  ).animate(_controller);
+  ).animate(CurvedAnimation(
+    parent: _controller,
+    curve: Curves.easeInOut,
+  ));
 
   @override
   void initState() {
