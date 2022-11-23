@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:login/routers/routers.dart';
 
 import 'package:login/theme/theme.dart';
+import 'package:login/widgets/animation_image.dart';
 import 'package:login/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,10 +26,7 @@ class HomeScreen extends StatelessWidget {
                 "Welcome to Jungle",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SvgPicture.asset(
-                AssetsApp.chat,
-                height: size.height * 0.45,
-              ),
+              ImageAnimation(size: size,),
               SizedBox(height: size.height * 0.05),
               RoundedButtom(
                 text: "Login",
