@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CircleSocialMedia extends StatelessWidget {
   final String assetImage;
   final Color colorCircle;
+  final Color colorIcon;
   final Function()? onTap;
   final double padding;
   final double borderWidth;
@@ -15,6 +16,7 @@ class CircleSocialMedia extends StatelessWidget {
     this.onTap,
     this.padding = 20,
     this.borderWidth = 2,
+    this.colorIcon = Colors.black,
   }) : super(key: key);
 
   @override
@@ -34,7 +36,7 @@ class CircleSocialMedia extends StatelessWidget {
           assetImage,
           width: 20,
           height: 20,
-          color: null,
+          color: colorIcon,
         ),
       ),
     );

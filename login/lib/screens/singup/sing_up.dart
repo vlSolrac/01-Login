@@ -93,14 +93,17 @@ class SignUpScreen extends StatelessWidget {
                 CircleSocialMedia(
                   assetImage: AssetsApp.facebook,
                   colorCircle: ThemeApp.primary,
+                  colorIcon: Colors.white,
                 ),
                 CircleSocialMedia(
                   assetImage: AssetsApp.google,
                   colorCircle: ThemeApp.primary,
+                  colorIcon: Colors.white,
                 ),
                 CircleSocialMedia(
                   assetImage: AssetsApp.twitter,
                   colorCircle: ThemeApp.primary,
+                  colorIcon: Colors.white,
                 ),
               ],
             )

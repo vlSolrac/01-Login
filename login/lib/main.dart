@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:login/helpers/preferences.dart';
 
 import 'package:login/routers/routers.dart';
 import 'package:login/theme/theme.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Preferences.init();
+
   runApp(const MyApp());
 }
 
@@ -15,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Login',
-      theme: ThemeApp.themeLigth,
+      theme: ThemeApp.themeDark,
       initialRoute: RoutesApp.home,
       routes: RoutesApp.routes,
     );

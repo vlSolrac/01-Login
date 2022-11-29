@@ -5,7 +5,13 @@ class ThemeApp {
   static const secondary = Color(0xFFF1E6FF);
 
   static ThemeData themeLigth = ThemeData.light().copyWith();
-  static ThemeData themeDark = ThemeData.dark().copyWith();
+
+  static ThemeData themeDark = ThemeData.dark().copyWith(
+      scaffoldBackgroundColor: Colors.black,
+      inputDecorationTheme: const InputDecorationTheme(
+          hintStyle: TextStyle(
+        color: Colors.black54,
+      )));
 }
 
 class AssetsApp {
@@ -20,5 +26,4 @@ class AssetsApp {
   static const mainBottom = "assets/images/main_bottom.png";
   static const mainTop = "assets/images/main_top.png";
   static const signUpTop = "assets/images/signup_top.png";
-
 }
