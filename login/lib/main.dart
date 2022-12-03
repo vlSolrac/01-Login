@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:login/helpers/preferences.dart';
+import 'package:login/providers/theme_provider.dart';
 import 'package:login/routers/routers.dart';
 import 'package:login/theme/theme.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Preferences.init();
 
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [ChangeNotifierProvider(create: (_) => ThemeProvider())],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Login',
-      theme: ThemeApp.themeLigth,
+      theme: Provider.of<ThemeProvider>(context).theme ? ThemeApp.themeLigth : ThemeApp.themeDark,
       initialRoute: RoutesApp.home,
       routes: RoutesApp.routes,
     );
