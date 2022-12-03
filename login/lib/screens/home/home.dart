@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/helpers/preferences.dart';
 import 'package:login/routers/routers.dart';
 import 'package:login/theme/theme.dart';
 import 'package:login/widgets/animation_image.dart';
@@ -24,7 +25,9 @@ class HomeScreen extends StatelessWidget {
                 "Welcome to Jungle",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              ImageAnimation(size: size,),
+              ImageAnimation(
+                size: size,
+              ),
               SizedBox(height: size.height * 0.05),
               RoundedButtom(
                 text: "Login",
@@ -32,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                 textColor: Colors.white,
                 press: () => Navigator.pushNamed(
                   context,
-                  RoutesApp.creditCard,
+                  RoutesApp.login,
                 ),
               ),
               const SizedBox(height: 20),
@@ -45,6 +48,13 @@ class HomeScreen extends StatelessWidget {
                   RoutesApp.signUp,
                 ),
               ),
+              const SizedBox(height: 20),
+              RoundedButtom(
+                text: "Theme",
+                color: ThemeApp.primary,
+                press: () => Preferences.theme = !Preferences.theme,
+                textColor: Colors.white,
+              )
             ],
           ),
         ),
