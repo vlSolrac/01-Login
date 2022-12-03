@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:login/routers/routers.dart';
-
 import 'package:login/theme/theme.dart';
 import 'package:login/widgets/animation_image.dart';
 import 'package:login/widgets/widgets.dart';
@@ -34,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                 textColor: Colors.white,
                 press: () => Navigator.pushNamed(
                   context,
-                  RoutesApp.login,
+                  RoutesApp.creditCard,
                 ),
               ),
               const SizedBox(height: 20),

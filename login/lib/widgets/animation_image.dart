@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:login/helpers/constances/assets_app.dart';
 
-import '../theme/theme.dart';
 
 class ImageAnimation extends StatefulWidget {
   final Size size;

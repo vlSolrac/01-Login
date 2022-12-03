@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login/theme/theme.dart';
+import 'package:login/helpers/constances/assets_app.dart';
 
 class SignUpBackground extends StatelessWidget {
   final Widget child;
